@@ -23,6 +23,7 @@ class Vehicle:
     def __init__(self):
         pass 
 
+# Sub-classes building on the Vehicle base class
 class GroundVehicle(Vehicle):
     def __init__(self):
         super().__init__()
