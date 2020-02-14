@@ -10,6 +10,14 @@ class GroundVehicle():
     def drive(self):
         return 'vroooom'
 
+    def __str__(self):
+        return f'number of wheels: {self.num_wheels}'
+
+# instance1 = GroundVehicle(2)
+# instance2 = GroundVehicle()
+# print(instance1) 
+# print(instance2)
+# Default seems to be working like a python function.
 
 # Subclass Motorcycle from GroundVehicle.
 #
@@ -18,8 +26,9 @@ class GroundVehicle():
 #
 # Override the drive() method in Motorcycle so that it returns "BRAAAP!!"
 class Motorcycle(GroundVehicle):
-    def __init__(self):
-        super().__init__(num_wheels=2)
+    def __init__(self, num_wheels=2):
+        super().__init__(num_wheels)
+        self.num_wheels = num_wheels 
 
     def drive(self):
         return 'BRAAAP!!'
@@ -37,3 +46,5 @@ vehicles = [
 # Go through the vehicles list and print the result of calling drive() on each.
 
 # TODO
+for vehicle in vehicles:
+    print(vehicle.drive())
