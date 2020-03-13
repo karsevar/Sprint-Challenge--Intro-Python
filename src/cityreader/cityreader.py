@@ -23,7 +23,7 @@ class City:
     self.lon = lon 
   
   def __str__(self):
-    return f'name: {self.name}, latitude: {self.lat}, longitude: {self.lon}'
+    return f'({self.name}, {self.lat}, {self.lon})'
 
 cities = []
 
@@ -84,7 +84,7 @@ for c in cities:
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
   # within will hold the cities that fall within the specified region
   within = []
-  
+
 
   # TODO Ensure that the lat and lon valuse are all floats
   # Go through each city and check to see if it falls within 
